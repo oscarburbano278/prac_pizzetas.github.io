@@ -8,9 +8,11 @@
     grid-template-columns: 1fr;
     
 }
+
 .headerP{
     
-    background-color: hsl(60, 48%, 95%);    
+    background-color: hsl(60, 48%, 95%);
+    
     
 }
 .menu-inicio{
@@ -21,59 +23,95 @@
     padding-right: 5%;
 
 }
-.contain_img{
+
+
+.img{
     height: auto;
-    display: flex;    
+    display: flex;
+    
     
 }
+
 .imagen{
     width: 30%;
     height: auto;
     padding-left: 8%;
     
 }
-.hre{
-    color: rgb(8, 8, 8);          
-}
 
-.hre:hover {
-    text-decoration: none;
-    color: #868282;
-    box-shadow: 5px;
+
+
+
+
+.hre{
+    color: #141313;  
     
 }
+
+
+.hre:hover {
+    background: rgb(250, 235, 22);
+  }
+  
+.hre:active {
+    background: rgb(250, 235, 22);
+    color: white;
+  }
+
+
+/*/
+.nav{
+    background-color: aliceblue;
+    display: flex;
+    flex-direction:row;
+    justify-content:flex-end;
+    gap: 30px;
+}
+*/
+
 .container-nav{
     background-color: rgb(250, 235, 22);
-    width: 100%;
+    
+    
 }
 #item{
     color: rgb(235, 33, 33);
+    
+    
 }  
-#item:hover{
-    color: hsl(24, 92%, 48%);
-    box-shadow: 5px;
-}
-#item:active {
-    background: rgb(209, 203, 112);
+  a:hover {
+    background: rgb(241, 239, 234);
+  }
+  
+  a:active {
+    background: rgb(224, 142, 19);
     color: white;
-}
+  }
+
+
+
 .section_princi{
-    width: 100%;    
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     /*repeat(3, 1fr)*/
-    grid-template-rows: auto;
-    padding: 1em 0em 0.1em 0em;
-    float: center; 
+    padding: 1em;
+    font-size: 1.2rem;   
 }
-.img_section{
-    width: 100%;
-    height: 100%;    
+
+.img-section{
+
+    
+    
+    
+   
 }
+
 #map{
     width: 100%;
-    height: 300px;    
+    height: 300px;
 }
+
 .footer{
     background-color:  hsl(60, 48%, 95%);
     display: flex;
