@@ -1,3 +1,4 @@
+/// funcioanlidad para el mapa del index
 function iniciarMap() {
     const coord = { lat:2.436537, lng: -76.614439}; // Coordenadas de la ubicación
   
@@ -12,4 +13,16 @@ function iniciarMap() {
        // Título del marcador
     });
   }
-  
+  //////////////////////////////////////////////////
+
+  function MostrarContenido(number){
+
+    console.log(number)
+
+    // document.getElementById("contenido").innerHTML=`Este es el contenido: ${number}`;
+
+    document.getElementById("contenido").innerHTML=`Elige tu sabor Preferido: ${number}`;
+
+
+
+}
