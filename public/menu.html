@@ -6,12 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Pizzetas</title>
+    <link rel="icon" type="image/png" href="/images/imgPagPrinc/pizzetas.png"/>
+
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Belanosima&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="/src/styles.css" />
     <link rel="stylesheet" href="/src/stylesMenu.css" />
 
@@ -28,18 +35,44 @@
       <div class="headerP">
 
         <div class="img">
-          <a href=""><img src="/images/imgPagPrinc/pizzetas.png" class="imagen"/></a>
+          <a href="index.html"><img src="/images/imgPagPrinc/pizzetas.png" class="imagen"/></a>
           <!-- <a href=""><img src="/images/bon-appetit.png" class="imagen1"/></a> -->
         </div>
 
         <div class="menu-inicio">
-          <a href="inicio-sesion.html" class="hre">Inicio de sesión</a>
-          <a href="registro.html" class="hre">Registrarse</a>
-          <a href="#" class="hre">Redes</a>
+          <a href="login.html" class="hre">Inicio de sesión</a>
+          <a href="register.html" class="hre">Registrarse</a>
+          <a href="#" class="hre" data-toggle="modal" data-target="#ventana">Contactos</a>
         </div>
-          
-                 
+
         
+          <!--ventana modal-->
+           
+          <div class="modal" tabindex="-1" role="dialog" id="ventana">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+    
+                <div class="modal-header">
+                  <h5 class="modal-title">Contactos</h5>
+                  <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+    
+                <div class="modal-body">
+                  <p>Telefonos: 3146261044 - 3106374691</p>
+                  <p>Ubicación: Calle 13 # 13-02</p>
+                  <p id="cont">-1 123 123123123</p>
+                </div>
+    
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>                
+                </div>
+    
+              </div>
+            </div>
+                   
+                         
       </div> 
 
       <div class="container-nav">
@@ -65,13 +98,13 @@
                 <a id="item" class="nav-link" href="menu.html">Nuestro Menu</a>
               </li>
               <li class="nav-item">
-                <a id="item" class="nav-link" href="promociones.html">Promociones</a>
+                <a id="item" class="nav-link" href="promotions.html">Promociones</a>
               </li>
               <li class="nav-item">
-                <a id="item" class="nav-link" href="pide-linea.html">Pide en linea</a>
+                <a id="item" class="nav-link" href="order-online.html">Pide en linea</a>
               </li>
               <li class="nav-item">
-                <a id="item" class="nav-link" href="contactos.html">Contáctanos</a>
+                <a id="item" class="nav-link" href="Redes.html">Redes</a>
               </li>
              
             </ul>
@@ -82,21 +115,202 @@
         <br>
       
       <div class="section_Menu">
-        
-        <div class="tipo_selec">
-          <p>baner seleccion de clase de pizzza</p>
-        </div>
 
-        <div class="mostrarTipo">
-          <p>se muestra la pizza escogida con sus ingredientes </p>
+                
+        <div class="tipo_selec">
+          
+          <div class="col border">
+            <div>
+              <!-- <img class="imgSelect" src="/images/imgMenu/selectMenu/perTriangle.jpeg" onclick="MostrarContenido(1)">  -->
+
+              
+
+              <ul class="nav nav-tabs">
+                <li class="nav-item">
+                  <a class="nav-link active" data-toggle="tab" href="#tab-1">
+
+                    <div class="textoTitulo">
+                      <p>Personal Triangular</p>
+                    </div>
+
+                    <img class="imgSelect" src="/images/imgMenu/selectMenu/perTriangle.jpeg">
+                  </a>
+                </li> 
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#tab-2">
+
+                    <div class="textoTitulo">
+                      <p>Personal Circular</p>
+                    </div>
+
+                    <img class="imgSelect" src="/images/imgMenu/selectMenu/perCircle.jpg">
+                  </a>
+                </li> 
+                
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#tab-3">
+
+                    <div class="textoTitulo">
+                      <p>Personal Familiar</p>
+                    </div>
+                    
+                    <img class="imgSelect" src="/images/imgMenu/selectMenu/family.jpeg">
+                  </a>
+                </li>
+              </ul>        
+                                    
+            </div>
+          </div>         
+        </div>
+        
+      
+
+        <div class="col border">
+
+          <div class="mostrarTipo">
+
+            <div class="tab-content p-3">
+              <div class="tab-pane show active" id="tab-1" role="tabpanel">
+                
+                <table class="men-r">                 
+                  <tr>
+                    <td><img class="imgMostrar" src="/images/imgMenu/hawaina.png"></td>
+                                
+        
+                    <td><img class="imgMostrar" src="/images/imgMenu/peperonee.png"></td>
+                  
+        
+                    <td><img class="imgMostrar" src="/images/imgMenu/jamonQueso.png"></td>
+                     
+        
+                    <td><img class="imgMostrar" src="/images/imgMenu/napolitana.png"></td>
+        
+                  </tr>
+        
+                  <tr>
+                      <td>
+                        <h5>HAWAINA</h5>
+                        <p>jamon - piña - queso </p>
+                      </td>
+        
+                      <td>
+                        <h5>PEPERONEE</h5>
+                        <p>jamon - peperonee - queso</p>
+                      </td>
+        
+                      <td>
+                        <h5>JAMON QUESO</h5>
+                        <p>jamon - queso</p>
+                      </td>
+        
+                      <td>
+                        <h5>NAPOLITANA</h5>
+                        <p>jamon - tomate - oregano - queso</p>
+                      </td>
+        
+                  </tr>                      
+        
+                  <tr>
+                    <td><h3>Especiales</h3></td>
+                  </tr>        
+                  
+                  <tr>           
+                    
+                    <td><img class="imgMostrar" src="/images/imgMenu/polloChamp.png"></td>
+        
+                    <td><img class="imgMostrar" src="/images/imgMenu/champi.png"></td>
+        
+                    <td><img class="imgMostrar" src="/images/imgMenu/criolla.png"></td>
+        
+                    <td><img class="imgMostrar" src="/images/imgMenu/mixta.png"></td>
+                    
+                  </tr>                 
+        
+                  <tr>
+                    <td>
+                      <h5>POLLO CHAMPIÑONES</h5>
+                      <p>jamon - peperonee - pollo - champiñones - queso</p>
+                    </td>
+        
+                    <td>
+                      <h5>CHAMPIÑONES</h5>
+                      <p>jamon - peperonee - champiñones - queso</p>
+                    </td>
+        
+                    <td>
+                      <h5>CRIOLLA</h5>
+                    <p>jamon - peperonee - carne - maiz tierno - queso</p>
+                    </td>
+        
+                    <td>
+                      <h5>MIXTA</h5>
+                      <p>jamon - peperonee - piña - champiñones - carne - pollo - queso</p>
+                    </td>
+        
+                  </tr>                
+        
+                </table>
+
+              </div>
+
+              <div class="tab-pane " id="tab-2" role="tabpanel">
+
+                <table class="men-r">                 
+                  <tr>
+                    <td><img class="imgMostrarCirc" src="/images/imgMenu/mostrarMenu/redondasCirc/persoCircular.jpg"></td>
+                                
+        
+                    <td><img class="imgMostrarCirc" src="/images/imgMenu/mostrarMenu/redondasCirc/persoCircular.jpg"></td>
+                         
+                           
+                  </tr>
+        
+                  <tr>
+                      <td>
+                        <h5>HAWAINA</h5>
+                        <p>jamon - piña - queso </p>
+                      </td>
+        
+                      <td>
+                        <h5>PEPERONEE</h5>
+                        <p>jamon - peperonee - queso</p>
+                      </td>
+                             
+                  </tr>
+                </table>
+
+              </div>
+              <div class="tab-pane " id="tab-3" role="tabpanel">
+
+                <table class="men-r">                 
+                  <tr>
+                    <td><img class="imgMostrarFamiliar" src="/images/imgMenu/mostrarMenu/familiares/pizza-de-jamon-queso-y-tocino.webp"></td>
+                        
+                                          
+                           
+                  </tr>
+        
+                  <tr>
+                      <td>
+                        <h5>HAWAINA</h5>
+                        <p>jamon - piña - queso </p>
+                      </td>  
+                                                  
+                  </tr>
+                </table>
+
+              </div>
+            </div> 
+
+
+            <!-- <div id="contenido">
+
+                 </div> -->            
+          </div>
+
         </div>
         <!-- <table class="men-r">
-          <tr>
-            <td><h3>Sencillas</h3></td>
-            
-          </tr>
-
-          
+                   
           
           <tr>
             <td><img src="/images/imgMenu/hawaina.png"></td>

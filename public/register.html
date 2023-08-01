@@ -20,9 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Belanosima&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="/src/styles.css" />
-    <link rel="stylesheet" href="/src/stylesRegist.css">
-
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
+       
 
   </head>
   <body>
@@ -34,15 +32,17 @@
 
       <div class="headerP">
 
-        <div class="contain_img">
-          <a href="index.html"><img src="/images/imgPagPrinc/pizzetas.png" class="imagen"/></a>        
+        <div class="img">
+          <a href="index.html"><img src="/images/imgPagPrinc/pizzetas.png" class="imagen"/></a>
+          <!-- <a href=""><img src="/images/bon-appetit.png" class="imagen1"/></a> -->
         </div>
 
         <div class="menu-inicio">
-          <a href="login.html" class="hre">Inicio de sesión</a>
-          <a href="register.html" class="hre">Registrarse</a>
-          <a href="#" class="hre" data-toggle="modal" data-target="#ventana">Contactos</a>
+            <a href="login.html" class="hre">Inicio de sesión</a>
+            <a href="register.html" class="hre">Registrarse</a>
+            <a href="#" class="hre" data-toggle="modal" data-target="#ventana">Contactos</a>
         </div>
+
 
         
           <!--ventana modal-->
@@ -70,8 +70,24 @@
     
               </div>
             </div>
-                   
-                         
+          
+
+          
+          <!-- <div class="textos">
+            <ul>         
+              <li class="nav-link">
+                <a href="#" class="hre">inicio de sesion</a>
+              </li>
+              <li class="nav-link">
+                <a href="#" class="hre">Registrarse</a>
+              </li>
+              <li class="nav-link">
+                <a href="#" class="hre">Redes</a>
+              </li>
+            </ul>
+          </div>   -->
+        
+        
       </div> 
 
       <div class="container-nav">
@@ -112,38 +128,86 @@
       </div>
 
         
-      
-      <div class="section_princi">
+      <article>
+        <div class="container-registro">
+          <div class="row">
 
-        <div class="item1">
-          
-          <img class="img_section" src="/images/imgPagPrinc/promo.png">
+            <!-- <div class="col-sm-10 col-md-8 col-lg-8 col-xl-6"> -->
+
+            <div class="col-sm-6 mx-auto">
+              
+              <form class="formulario" id="form-register">
+
+                    <h2><strong>Regístro</strong></h2>
+                    <hr>
+                    <div class="form-group">
+                      <label for="correo">Correo Electrónico *</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        placeholder="luis@email.com"
+                      />
+                      <span id="id-error-email" class="error"></span>                           
+                    </div>
+
+
+                    <div class="form-group">
+                      <label for="password">Contraseña *</label>
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="password"
+                        placeholder="contraseña"
+                      />
+                      <span id="id-error-password" class="error"></span>                    
+                    </div>
+
+                    <div class="form-group">
+                      <label for="password">Confirmación de Contraseña *</label>
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="confirmation" 
+                        placeholder="confirmación de contraseña"
+                      /> 
+                      <span id="id-error-Conf-password" class="error"></span>                  
+                    </div>                    
+
+                  <br>
+
+                  <div class="form-check mb-2 mr-sm-2">
+                    <input
+                    name="aceptoT"
+                      class="form-check-input"
+                      type="checkbox"
+                      id="acepto"
+                    />
+                    <label class="form-check-label" for="acepto">
+                      Acepto los términos de uso
+                    </label>
+                    <span id="errorAceptoTer" class="error"></span>
+                  </div>
+  
+                  <div>
+                    <p id="cont">*Campos Obligatorios</p>
+                  </div>      
+
+                  <input type="submit" class="btn btn-danger mb-2" id="boton" value="Confirmar">
+              </form>
+            </div>
+          </div>    
         </div>
 
-        <div class="item2">
-          
-          <img class="img_section" src="/images/imgPagPrinc/pizza.jpg">
-        </div>
+      </article>
 
-        <div class="item3">
-          
-          <img class="img_section" src="/images/imgPagPrinc/appetit.png">
-        </div>
-      </div>
-
-      <div id="map">        
-        
-      </div>
-
+     <hr>
       
       <div class="footer">
-        <h5 class="uno">número de domicilio y servicio al cliente </h5>
+        <h5 class="uno">numero de domicilio y servicio al cliente </h5>
         <p class="uno">Popayan</p>
         <p class="uno">cra 13 N° 13-02</p>
         <p class="uno">3146261044</p>
-                <!-- <a href="" title="contador visitas blogger"><img src="https://counter8.freecounter.ovh/private/contadorvisitasgratis.php?c=j3ayzenqusgjgffjqh8w7m4dc1mhrmd3" title="contador visitas blogger" alt="contador visitas blogger"></a>  -->
-
-                
       </div>
 
     <script
@@ -165,7 +229,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <script src="/src/main.js"></script>
+    
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
   </body>
 </html>

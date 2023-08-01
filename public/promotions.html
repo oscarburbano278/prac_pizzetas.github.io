@@ -6,12 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Pizzetas</title>
+    <link rel="icon" type="image/png" href="/images/imgPagPrinc/pizzetas.png"/>
+
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Belanosima&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="/src/styles.css" />
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
@@ -27,16 +34,43 @@
       <div class="headerP">
 
         <div class="img">
-          <a href=""><img src="/images/imgPagPrinc/pizzetas.png" class="imagen"/></a>
+          <a href="index.html"><img src="/images/imgPagPrinc/pizzetas.png" class="imagen"/></a>
           <!-- <a href=""><img src="/images/bon-appetit.png" class="imagen1"/></a> -->
         </div>
 
         <div class="menu-inicio">
-          <a href="inicio-sesion.html" class="hre">Inicio de sesión</a>
-          <a href="registro.html" class="hre">Registrarse</a>
-          <a href="#" class="hre">Redes</a>
+          <a href="login.html" class="hre">Inicio de sesión</a>
+          <a href="register.html" class="hre">Registrarse</a>
+          <a href="#" class="hre" data-toggle="modal" data-target="#ventana">Contactos</a>
         </div>
-          
+
+        
+          <!--ventana modal-->
+           
+          <div class="modal" tabindex="-1" role="dialog" id="ventana">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+    
+                <div class="modal-header">
+                  <h5 class="modal-title">Contactos</h5>
+                  <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+    
+                <div class="modal-body">
+                  <p>Telefonos: 3146261044 - 3106374691</p>
+                  <p>Ubicación: Calle 13 # 13-02</p>
+                  <p id="cont">-1 123 123123123</p>
+                </div>
+    
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>                
+                </div>
+    
+              </div>
+            </div>
+                  
                  
         
       </div> 
@@ -64,13 +98,13 @@
                 <a id="item" class="nav-link" href="menu.html">Nuestro Menu</a>
               </li>
               <li class="nav-item">
-                <a id="item" class="nav-link" href="promociones.html">Promociones</a>
+                <a id="item" class="nav-link" href="promotions.html">Promociones</a>
               </li>
               <li class="nav-item">
-                <a id="item" class="nav-link" href="pide-linea.html">Pide en linea</a>
+                <a id="item" class="nav-link" href="order-online.html">Pide en linea</a>
               </li>
               <li class="nav-item">
-                <a id="item" class="nav-link" href="contactos.html">Contáctanos</a>
+                <a id="item" class="nav-link" href="Redes.html">Redes</a>
               </li>
              
             </ul>

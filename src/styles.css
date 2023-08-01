@@ -1,4 +1,6 @@
 .container{
+    font-family: 'Belanosima', sans-serif;
+    font-size: 120%;
     width: 100%;
     max-width: 1200px;
     margin: auto;
@@ -40,10 +42,11 @@
     text-decoration: none;
     color: #868282;
     box-shadow: 5px;
+    background-position: right;
     
 }
 .container-nav{
-    background-color: rgb(250, 235, 22);
+    background-color: #EFD61B;
     width: 100%;
 }
 #item{
@@ -76,8 +79,10 @@
 }
 .footer{
     background-color:  hsl(60, 48%, 95%);
+    /*background-color:#F6E9BF;*/
     display: flex;
     gap: 25px;
     justify-content: center;
     padding: 1%;
 }
+

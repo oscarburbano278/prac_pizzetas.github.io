@@ -6,17 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Pizzetas</title>
+    <link rel="icon" type="image/png" href="/images/imgPagPrinc/pizzetas.png"/>
+
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Belanosima&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="/src/styles.css" />
 
-    <link rel="stylesheet" href="/src/stylesRegist.css" />
-
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
 
   </head>
   <body>
@@ -29,18 +33,46 @@
       <div class="headerP">
 
         <div class="img">
-          <a href=""><img src="/images/pizzetas.png" class="imagen"/></a>
+          <a href="index.html"><img src="/images/imgPagPrinc/pizzetas.png" class="imagen"/></a>
           <!-- <a href=""><img src="/images/bon-appetit.png" class="imagen1"/></a> -->
         </div>
 
         <div class="menu-inicio">
-            <a href="inicio-sesion.html" class="hre">Inicio de sesión</a>
-            <a href="registro.html" class="hre">Registrarse</a>
-            <a href="#" class="hre">Redes</a>
+            <a href="login.html" class="hre">Inicio de sesión</a>
+            <a href="register.html" class="hre">Registrarse</a>
+            <a href="#" class="hre" data-toggle="modal" data-target="#ventana">Contactos</a>
         </div>
-          
+
+
+          <!--ventana modal-->
+
+          <div class="modal" tabindex="-1" role="dialog" id="ventana">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+
+                <div class="modal-header">
+                  <h5 class="modal-title">Contactos</h5>
+                  <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+
+                <div class="modal-body">
+                  <p>Telefonos: 3146261044 - 3106374691</p>
+                  <p>Ubicación: Calle 13 # 13-02</p>
+                  <p id="cont">-1 123 123123123</p>
+                </div>
+
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+              </div>
+            </div>
+
+
           <!-- <div class="textos">
-            <ul>         
+            <ul>
               <li class="nav-link">
                 <a href="#" class="hre">inicio de sesion</a>
               </li>
@@ -52,9 +84,9 @@
               </li>
             </ul>
           </div>   -->
-        
-        
-      </div> 
+
+
+      </div>
 
       <div class="container-nav">
         <nav class="navbar navbar-expand-lg navbar-dark">
@@ -76,79 +108,56 @@
                 <a id="item" class="nav-link" href="index.html">Inicio</a>
               </li>
               <li class="nav-item">
-                <a id="item" class="nav-link" href="#">Nuestro Menu</a>
+                <a id="item" class="nav-link" href="menu.html">Nuestro Menu</a>
               </li>
               <li class="nav-item">
-                <a id="item" class="nav-link" href="#">Promociones</a>
+                <a id="item" class="nav-link" href="promotions.html">Promociones</a>
               </li>
               <li class="nav-item">
-                <a id="item" class="nav-link" href="#">Pide en linea</a>
+                <a id="item" class="nav-link" href="order-online.html">Pide en linea</a>
               </li>
               <li class="nav-item">
-                <a id="item" class="nav-link" href="#">Contáctanos</a>
+                <a id="item" class="nav-link" href="Redes.html">Redes</a>
               </li>
-             
+
             </ul>
           </div>
         </nav>
       </div>
 
-        
-     <div class="registro">
-        <form class="fomulario">
-          <h2>Registro</h2>
-          <hr>
-          <div class="form-group">
+        <article>
+          <div class="Container-login">
+            <div class="row">
+              <div class="col-sm-6 mx-auto">
+                <form id="form-login">
+                  <h2><strong>Inicio de sesion</strong></h2>
+                  <hr>
+                  <div class="form-group">
+                    <label for="correo" class="clas-lbl-correo">Correo Electronico *</label>
+                    <input name="email" type="email" class="form-control" id="email" placeholder="juan@email.com"/>
 
-            <select class="form-control" id="opciSelec" >
-              <option id="selecTipo">Seleccione tipo de docuemento</option>
-              <option>Cedula de ciudadania</option>
-              <option>Cedula extranjeriana</option>
-              <option>Nit</option>
-              <option>Tarjeta de identidad</option>
-            </select>
+                    <span class="error" id="id-error-email"></span>
+                  </div>
+
+
+                  <div class="form-group">
+                    <label for="password">Contraseña *</label>
+                    <input type="password" class="form-control" id="password" placeholder="contraseña"/>
+
+                    <span class="error" id="id-error-password"></span>
+                  </div>
+
+
+                  <input type="submit" class="btn btn-danger mb-2"  value="Confirmar">
+                </form>
+              </div>
+            </div>
           </div>
+        </article>
 
-          <div class="form-group">
-            <input type="text" class="form-control" id="numDoc" placeholder="Numero de documento">
-          </div>
 
-          <div class="form-group">
-            <input type="text" class="form-control" id="nombre" placeholder="Nombres">
-          </div>
+      <br>
 
-          <div class="form-group">
-            <input type="text" class="form-control" id="apellido" placeholder="Apellido">
-          </div>
-
-          <div class="form-group">
-            <input type="text" class="form-control" id="correo" placeholder="Correo">
-          </div>
-
-          <div class="form-group">
-            <input type="text" class="form-control" id="password" placeholder="Contraseña">
-          </div>
-
-          <div class="form-group">
-            <input type="text" class="form-control" id="password" placeholder="Confirmacion de contraseña">
-          </div>
-
-          <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="aceptoT"/>
-            <label for="aceptoT" class="form-check-label">  Acepto los terminos</label>
-          </div>
-
-          <hr>
-
-          <div class="clas">
-            <input type="submit" class="btn-" id="btnRegis" value="completar registro" onclick="return validar(this.form)">
-          </div>
-        </form>
-
-     </div>
-
-     <hr>
-      
       <div class="footer">
         <h5 class="uno">numero de domicilio y servicio al cliente </h5>
         <p class="uno">Popayan</p>
@@ -175,7 +184,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <script src="/src/main.js"></script>
+    
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
   </body>
 </html>
