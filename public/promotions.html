@@ -6,14 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Pizzetas</title>
+    <link rel="icon" type="image/png" href="/images/imgPagPrinc/pizzetas.png"/>
+
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Belanosima&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="/src/styles.css" />
-    <link rel="stylesheet" href="/src/stylesMenu.css" />
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
 
@@ -28,16 +34,43 @@
       <div class="headerP">
 
         <div class="img">
-          <a href=""><img src="/images/imgPagPrinc/pizzetas.png" class="imagen"/></a>
+          <a href="index.html"><img src="/images/imgPagPrinc/pizzetas.png" class="imagen"/></a>
           <!-- <a href=""><img src="/images/bon-appetit.png" class="imagen1"/></a> -->
         </div>
 
         <div class="menu-inicio">
-          <a href="inicio-sesion.html" class="hre">Inicio de sesión</a>
-          <a href="registro.html" class="hre">Registrarse</a>
-          <a href="#" class="hre">Redes</a>
+          <a href="login.html" class="hre">Inicio de sesión</a>
+          <a href="register.html" class="hre">Registrarse</a>
+          <a href="#" class="hre" data-toggle="modal" data-target="#ventana">Contactos</a>
         </div>
-          
+
+        
+          <!--ventana modal-->
+           
+          <div class="modal" tabindex="-1" role="dialog" id="ventana">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+    
+                <div class="modal-header">
+                  <h5 class="modal-title">Contactos</h5>
+                  <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+    
+                <div class="modal-body">
+                  <p>Telefonos: 3146261044 - 3106374691</p>
+                  <p>Ubicación: Calle 13 # 13-02</p>
+                  <p id="cont">-1 123 123123123</p>
+                </div>
+    
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>                
+                </div>
+    
+              </div>
+            </div>
+                  
                  
         
       </div> 
@@ -65,59 +98,59 @@
                 <a id="item" class="nav-link" href="menu.html">Nuestro Menu</a>
               </li>
               <li class="nav-item">
-                <a id="item" class="nav-link" href="promociones.html">Promociones</a>
+                <a id="item" class="nav-link" href="promotions.html">Promociones</a>
               </li>
               <li class="nav-item">
-                <a id="item" class="nav-link" href="pide-linea.html">Pide en linea</a>
+                <a id="item" class="nav-link" href="order-online.html">Pide en linea</a>
               </li>
               <li class="nav-item">
-                <a id="item" class="nav-link" href="contactos.html" data-toggle="modal" data-target="#ventana">Contáctanos</a>
+                <a id="item" class="nav-link" href="Redes.html">Redes</a>
               </li>
-
-              <div class="modal" tabindex="-1" role="dialog" id="ventana">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-        
-                    <div class="modal-header">
-                      <h5 class="modal-title">PIZZETAS</h5>
-                      <button type="button" class="close" data-dismiss="modal">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-        
-                    <div class="modal-body">
-                      <p>Pedidos y Domicilios: </p>
-                      <p>314 626 10 44 ---  310 637 46 91</p>
-                      <p>Calle 13 # 13-02 Colombia Primera Etapa</p>
-                    </div>
-        
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
-                      
-                    </div>
-        
-                  </div>
-                </div>
-              </div>
-
-              <script>
-                function abrir(){
-                  $('#ventana').modal('show');
-                }
-              </script>
              
             </ul>
           </div>
         </nav>
       </div>
 
-        <br>
-      
-      <div class="section_contactos">
         
-       
-          
-      </div>   
+      
+      
+        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 "></div>
+        <div id="ejemploCarrusel" class="carousel slide" data-ride="carousel">
+
+            <!--indicadores-->
+            <ol class="carousel-indicators">
+                <li data-target="#ejemploCarrusel" data-slide-to="0"></li>
+                <li data-target="#ejemploCarrusel" data-slide-to="1"></li>
+                
+            </ol>
+            <!-- laminas -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/images/imgCarrusel/pizza-hut.jpg" class="d-block w-100 img-fluid"/>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="/images/imgCarrusel/bon-appetit.png" class="d-block w-100 img-fluid"/>
+                </div>
+
+                <div class="carousel-item">
+                  <img src="/images/imgCarrusel/pizza.jpg" class="d-block w-100 img-fluid"/>
+              </div>
+            <!-- ///botones -->
+            </div>
+              <a class="carousel-control-prev" href="#ejemploCarrusel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#ejemploCarrusel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true" ></span>
+                <span class="sr-only">Next</span>
+              </a>
+          </div>
+        </div>       
+    </div>
+    
 
       
       <div class="footer">

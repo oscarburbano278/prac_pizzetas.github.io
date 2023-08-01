@@ -6,14 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Pizzetas</title>
+    <link rel="icon" type="image/png" href="/images/imgPagPrinc/pizzetas.png"/>
+
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Belanosima&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="/src/styles.css" />
-    <link rel="stylesheet" href="/src/stylesMenu.css" />
+
+    <link rel="stylesheet" href="/src/stylesPlinea.css">
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
 
@@ -28,16 +36,42 @@
       <div class="headerP">
 
         <div class="img">
-          <a href=""><img src="/images/pizzetas.png" class="imagen"/></a>
+          <a href="index.html"><img src="/images/imgPagPrinc/pizzetas.png" class="imagen"/></a>
           <!-- <a href=""><img src="/images/bon-appetit.png" class="imagen1"/></a> -->
         </div>
 
         <div class="menu-inicio">
-          <a href="inicio-sesion.html" class="hre">Inicio de sesión</a>
-          <a href="registro.html" class="hre">Registrarse</a>
-          <a href="#" class="hre">Redes</a>
+          <a href="login.html" class="hre">Inicio de sesión</a>
+          <a href="register.html" class="hre">Registrarse</a>
+          <a href="#" class="hre" data-toggle="modal" data-target="#ventana">Contactos</a>
         </div>
-          
+
+        
+          <!--ventana modal-->
+           
+          <div class="modal" tabindex="-1" role="dialog" id="ventana">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+    
+                <div class="modal-header">
+                  <h5 class="modal-title">Contactos</h5>
+                  <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+    
+                <div class="modal-body">
+                  <p>Telefonos: 3146261044 - 3106374691</p>
+                  <p>Ubicación: Calle 13 # 13-02</p>
+                  <p id="cont">-1 123 123123123</p>
+                </div>
+    
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>                
+                </div>
+    
+              </div>
+            </div>                
                  
         
       </div> 
@@ -65,13 +99,13 @@
                 <a id="item" class="nav-link" href="menu.html">Nuestro Menu</a>
               </li>
               <li class="nav-item">
-                <a id="item" class="nav-link" href="promociones.html">Promociones</a>
+                <a id="item" class="nav-link" href="promotions.html">Promociones</a>
               </li>
               <li class="nav-item">
-                <a id="item" class="nav-link" href="pide-linea.html">Pide en linea</a>
+                <a id="item" class="nav-link" href="order-online.html">Pide en linea</a>
               </li>
               <li class="nav-item">
-                <a id="item" class="nav-link" href="contactos.html">Contáctanos</a>
+                <a id="item" class="nav-link" href="Redes.html">Redes</a>
               </li>
              
             </ul>
@@ -79,16 +113,33 @@
         </nav>
       </div>
 
-        <br>
+      <div class="modPedido">
+        <div class="encabezado">
+            <h5 class="enunciado">ESTA ORDEN ES A DOMICILIO O PARA RECOGER EN LA TIENDA</h5>
+        </div>
+        <div class="caj_opcion">
 
-        <div class="introM">
-            <h1>haz tu pedido </h1>
+            <div class="opcion">
+              <img src="/images/imgPideLinea/imgDomi.png" alt="" class="classImages">
+            </div>
 
-            <h5>Pedido a Domicilio</h5>
-            <h5>Recoger en Pizzetas</h5>
+            <div class="opcion">
+              <img src="/images/imgPideLinea/imgUbicacion.png" alt="" class="classImages">
+            </div>
+          
+        </div>
+      </div>
 
-        </div>      
       
+      <div class="footer">
+        <h5 class="uno">numero de domicilio y servicio al cliente </h5>
+        <p class="uno">Popayan</p>
+        <p class="uno">cra 13 N° 13-02</p>
+        <p class="uno">3146261044</p>
+                <!-- <a href="" title="contador visitas blogger"><img src="https://counter8.freecounter.ovh/private/contadorvisitasgratis.php?c=j3ayzenqusgjgffjqh8w7m4dc1mhrmd3" title="contador visitas blogger" alt="contador visitas blogger"></a>  -->
+
+                
+      </div>
 
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
